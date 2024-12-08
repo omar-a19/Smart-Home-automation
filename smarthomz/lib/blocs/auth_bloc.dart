@@ -62,11 +62,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       if (user != null) {
         emit(Authenticated(user));
         ScaffoldMessenger.of(event.context).showSnackBar(
-          SnackBar(content: Text('Logged in Successfully!')),
+          const SnackBar(content: Text('Logged in Successfully!')),
         );
         Navigator.pushReplacement(
           event.context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       } else {
         emit(AuthError('Authentication failed: Invalid email or password.'));
@@ -84,11 +84,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(Authenticated(user));
         // Show success notification and navigate to login screen
         ScaffoldMessenger.of(event.context).showSnackBar(
-          SnackBar(content: Text('Account created successfully!')),
+          const SnackBar(content: Text('Account created successfully!')),
         );
         Navigator.pushReplacement(
           event.context,
-          MaterialPageRoute(builder: (context) => LoginScreen()),
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
         );
       } else {
         emit(Unauthenticated());

@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
             // Navigate to home screen if authenticated
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
+              MaterialPageRoute(builder: (context) => const HomeScreen()),
             );
           }
         },
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
+                        const Text(
                           'Welcome Back',
                           style: TextStyle(
                             fontSize: 32,
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Form(
                           key: _formKey,
                           child: Column(
@@ -120,17 +120,17 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 label: 'Email',
                                 obscureText: false,
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               _buildTextField(
                                 controller: _passwordController,
                                 label: 'Password',
                                 obscureText: true,
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               _buildRememberMeCheckbox(),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               _buildLoginButton(context),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               _buildSignUpButton(context),
                             ],
                           ),
@@ -153,8 +153,8 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
     required bool obscureText,
   }) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
-      padding: EdgeInsets.symmetric(vertical: 10),
+      duration: const Duration(milliseconds: 300),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(
@@ -164,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+          contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         ),
         obscureText: obscureText,
         validator: (value) {
@@ -189,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
             });
           },
         ),
-        Text(
+        const Text(
           'Remember me',
           style: TextStyle(color: Colors.white),
         ),
@@ -199,8 +199,8 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
 
   Widget _buildLoginButton(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
-      padding: EdgeInsets.symmetric(vertical: 10),
+      duration: const Duration(milliseconds: 300),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: ElevatedButton(
         onPressed: () {
           if (_formKey.currentState!.validate()) {
@@ -218,10 +218,10 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          padding: EdgeInsets.symmetric(vertical: 15),
-          minimumSize: Size(double.infinity, 50),
+          padding: const EdgeInsets.symmetric(vertical: 15),
+          minimumSize: const Size(double.infinity, 50),
         ),
-        child: Text('Login'),
+        child: const Text('Login'),
       ),
     );
   }

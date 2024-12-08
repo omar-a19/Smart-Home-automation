@@ -13,7 +13,7 @@ import 'blocs/device_bloc.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -38,11 +38,11 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
 
-          '/login': (context) => LoginScreen(),
-          '/signup': (context) => SignUpScreen(),
+          '/login': (context) => const LoginScreen(),
+          '/signup': (context) => const SignUpScreen(),
         },
 
-        home: LoginScreen(),
+        home: const LoginScreen(),
       ),
     );
   }
