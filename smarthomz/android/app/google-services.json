@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756197314313",
+    "project_id": "smarthomz-49270",
+    "storage_bucket": "smarthomz-49270.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756197314313:android:32b176d51a68998e7b8dd8",
+        "android_client_info": {
+          "package_name": "com.example.smarthomz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFEqI9Tr1ZRlwGvMLqadgvF0VIXkgiC-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
